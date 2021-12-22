@@ -22,19 +22,41 @@ integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRk
 "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"crossorigin="anonymous">
 </script>
-
+<!-----------------------------------graph-------------------->
 <script src=
 "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
 integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
 </script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'USDT', 'DAI'],
+      ['2014',  100,      40],
+      ['2015',  170,      40],
+      ['2016',  60,       120],
+      ['2017',  130,      50]
+    ]);
+
+    var options = {
+      title: 'AAVE',
+      curveType: 'function',
+      legend: { position: 'bottom' }
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+    chart.draw(data, options);
+  }
+</script>
     
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="img-logo" type="image/png" href="https://www.brew.money//dawnload.png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
- 
-    <title>Document</title>
+    <title>brew/title>
+
+<!-----------------------style------------>
+
     <style>
       body{
         background-color: #AFDBF5;
@@ -124,7 +146,7 @@ integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0J
  right: 50%;
  left:24%;
  top: 22%;
- width: 324px;
+ width: 21%;
  margin-top: 1.2em;
     margin-bottom: 1.2em;
     font-size: 15px;
@@ -175,23 +197,17 @@ integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0J
 .dropdown:hover .dropbtn {
   background-color: #0e4c64;
 }
-.cal{
+.chart{
   position: fixed;
-  top:50%;
-  left:1%;
+  top: 500px;
+  left: 0%;
+  width: 100%;
+  height: 30%;
+  
 }
-.calculator{
-  top:100%;
+  
+  
 
-}
-.result{
-  top:100px
-  
-  
-  
-  ;
-
-}
 
     </style>
     </head>
@@ -200,50 +216,37 @@ integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0J
                 
                 
                 <img src="https://uploads-ssl.webflow.com/61768faf04d20bf3487b5a2a/6176a6363e64b8d84e32d0b7_brew-icon-256px-v2.png" loading="eager" width="55" height="55" alt="Brew" class="img-logo" position="absolute" top="-3%" left="7;">
-                <!-- Navigation-->
+                <!-------------- title------------------------>
                         
                         
                 <h1 class = heading style="color: #1c98"> 
                   Stablecoin Deposits on Aave
                 </h1>
                 <a data-w-id="14f1dfb2-926f-581f-7faa-3f62171b1db3" href="" class="button-hero-signup w-button">Join the waitlist</a>
-                
-                
-           
               </head>
-              <div class="aave">AAVE PRICE</div>                     
-                                
-                                     
-                                 
-                                  
-                                 
-                                  
-        
-                
-                
-                
-                     
-                
-                <!-- Masthead-->
-                <header class="masthead">
-                    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-                        <div class="d-flex justify-content-center">
-                            <div class="text-center">
-                                <h2 class="detail" >What is AAVE ?</h1>
-                                <h3 class="mean" style="font-family:verdana;">Aave is an open source and non-custodial liquidity protocol for earning interest on deposits and borrowing assets.</h2>
-                                
-                               
-                            </div>
-                        </div>
-                    </div>
-                </header>
-                <div class="dropdown">
-                  <button class="btn btn-success 
-                          dropdown-toggle" type="button" 
-                          id="dropdownMenuButton" 
-                          data-toggle="dropdown"
-                          aria-haspopup="true" 
-                          aria-expanded="false">
+              
+              
+              <!------------------------AAVE PRICE ------------>
+              
+              <div class="aave">AAVE PRICE
+              <div class="Price">$172.8
+              <div class="percentage">16%
+              </div></div></div>
+              <!----------section of aave--------->
+              <article class="text-center">
+              <h1 class="detail" >What is AAVE ?</h1>
+              <p class="mean" style="font-family:verdana;">Aave is an open source and non-custodial liquidity protocol for earning interest on deposits and borrowing assets.</p>
+              </article>
+              
+
+              <!-----------------dropdwon ------------------->
+              <div class="dropdown">
+              <button class="btn btn-success 
+              dropdown-toggle" type="button" 
+              id="dropdownMenuButton" 
+              data-toggle="dropdown"
+              aria-haspopup="true" 
+              aria-expanded="false">
                       CHAIN
                   </button>
                 
@@ -261,55 +264,12 @@ integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0J
             <li class="dropdown-item">
                 
         </ul>
-                
-          <p class="cal">SHE HOW MUCH YOU CAN EARN! </p>  
-             
 
-              <fieldset>
-            
-              <label for="base" class="calculator">Principal <span class="currencySymbol"></span>:</label>
-              <input type="text" name="base" id="base" value="1,000" /><br><br>
-              <label for="deposit">Monthly Deposit <span class="currencySymbol"></span>:</label>
-              <input type="text" name="deposit" id="deposit" disabled/><br>
-              <label for="rate">% Rate:</label>
-              <input type="text" name="rate" id="rate" disabled/><br>
-              <label for="years">Years:</label>
-              <input type="text" name="years" id="years" disabled/><br> -->
-              <button type="submit" id="calcButton" class='myButton' disabled="disabled">Calculate</button>
-  
-              <button type="submit" id="calcButton" disabled="disabled">Calculate</button>
-              <button type="button" id="clearButton" disabled="disabled">Clear</button>
-  
-            </fieldset>
-            </div>
-        </form>
-        </div>
-  
-
-
-     <div id="resultsWrap">
-        <h2>Results</h2>
-        <ul class='plain'>
-          <li class="title">Final Balance</li>
-          <li id='amount' class="entry">&nbsp;</li>
-          <li class="title">Total Deposits</li>
-          <li id='totalDeposits' class="entry">&nbsp;</li>
-          <li class="title">Total Interest</li>
-          <li id='totalInterest' class="entry">&nbsp;</li>
-        </ul>
-      </div> -->
-      <br><br>
-    <div id="chartWrap" class="result">
-        <h2>Result USD</h2>
-        <div id="chart_div"></div>
-      </div>
-      </div>
+        <div id="curve_chart" class="chart"></div>
+       <!------------------------------calculator----------------------->
+        <div id="calculator" class="cal"></div>
+        <title>how much you can earn? </title>
+        
 </body>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.min.js"></script>
-  <script type="text/javascript" src="shared-min.js"></script>
-  <script type="text/javascript" src="calculator.js"></script>
-  
-  
+
 </html>
